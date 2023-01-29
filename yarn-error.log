@@ -1,0 +1,45 @@
+Arguments: 
+  D:\nodejs\node.exe C:\Users\86134\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add echarts --save
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\System32;C:\Windows\System32\wbem;D:\nodejs\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\86134\AppData\Roaming\npm;D:\software\Git\cmd;C:\Program Files\Java\jdk1.8.0_333\bin\bin;C:\Program Files\Java\jdk1.8.0_333\bin\jre\bin;D:\software\apache-maven-3.5.4\bin;C:\Users\86134\AppData\Local\Microsoft\WindowsApps;C:\Users\86134\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\86134\AppData\Roaming\npm;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\01_邓\private\viteProject\node_modules\esbuild\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "viteProject",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build"
+    },
+    "dependencies": {
+      "element-plus": "^2.2.15",
+      "vue": "^3.0.4",
+      "vue-router": "^4.0.13",
+      "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+      "@vue/compiler-sfc": "^3.0.4",
+      "unplugin-auto-import": "^0.11.2",
+      "unplugin-vue-components": "^0.22.4",
+      "vite": "^1.0.0-rc.13"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
