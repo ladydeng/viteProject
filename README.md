@@ -2,7 +2,7 @@
 
 # 使用vite构建项目步骤
 ## 1. 安装yarn: npm install yarn -g    (不安装yarn的可以使用npm)
-## 2. yarn create vite  ||   yarn create vite
+## 2. yarn create vite  使用vite创建vue3项目
 ## 3. yarn install
 ## 4. yarn dev  运行项目
 ## 5. 创建配置文件 vite.config.js

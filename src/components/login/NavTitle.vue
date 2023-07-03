@@ -1,22 +1,18 @@
 <template>
-  <div>父组件传给子组件的值</div>
   <div style="color: red">网站标题：{{ title }}</div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { onMounted } from "vue"
 
-export default {
-    props:{
-        title:String
-    },
-
-    setup(props, context){
-        onMounted(() => {
-            console.log(props.title)
-        })
-    }
+interface Props {
+    title: string
 }
+
+const props = withDefaults(defineProps<Props>(),{
+    title:"网站标题"
+})
+
 </script>
 
 <style>

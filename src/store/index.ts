@@ -2,12 +2,21 @@ import { createStore  } from "vuex"
 
 const store: any = createStore({
     state:{
-        token:"0120"
+        token:""
     },
 
     getters:{
         token(state){
-            return state.token
+            if(state.token){
+                return state.token
+            }else{
+                return localStorage.getItem("token") || ''
+            } 
+        }
+    },
+    mutations:{
+        setToken(state, token){
+            state.token = token
         }
     }
 })

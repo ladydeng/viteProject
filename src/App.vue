@@ -4,9 +4,6 @@
 
 <script lang="ts">
 export default {
-  name: 'App',
-  components: {
-    
-  }
+  name: 'App'
 }
 </script>

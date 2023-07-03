@@ -13,11 +13,11 @@ export default {
         '/@/': resolve(__dirname, './src')
     },
     proxy: {
-        '/api': {
+        '/lencon': {
             target: config.baseUrl,
             changeOrigin: true,
             secure: false,
-            rewrite: (path) => path.replace('/api', '')
+            rewrite: (path) => path.replace('/lencon', '')
         }
     },
     // element-plus 按需导入

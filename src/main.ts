@@ -3,14 +3,18 @@ import App from './App.vue'
 import './index.css'
 import router from './router/index'
 import store from './store/index'
+import axios from "./axios/index"
+import config from "./config"
 
 import ElementPlus from 'element-plus'
 import '../node_modules/element-plus/theme-chalk/index.css'
 
-const app  = createApp(App)
+const app = createApp(App)
+
 // 定义全局变量
 app.config.globalProperties.$store = store
-app.config.globalProperties.$title = "全局变量值"
-app.use(router).use(store).use(ElementPlus)
+app.config.globalProperties.$title = "新闻资讯中心"
+app.config.globalProperties.$baseUrl = config.baseUrl
 
+app.use(router).use(store).use(axios).use(ElementPlus)
 app.mount('#app')
