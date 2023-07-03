@@ -4,12 +4,17 @@ var routes:Array<RouteRecordRaw> = [
     {
         path:"/",
         name:"index",
-        component: () => import("/@/views/index/Index.vue")
+        component: () => import("/@/views/Index.vue")
     },
     {
         path:"/login",
         name:"login",
-        component: () => import("/@/views/login/Login.vue")
+        component: () => import("/@/views/Login.vue")
+    },
+    {
+        path:"/newsDetail",
+        name:"newsDetail",
+        component: () => import("/@/views/NewsDetail.vue")
     }
 ]
 
