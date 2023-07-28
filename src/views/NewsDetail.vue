@@ -3,10 +3,14 @@
         <h3>{{ newsInfo.value.newsTitle }}</h3>
         <div v-html="newsInfo.value.newsContent"></div>
     </div>
+    <!-- <myForm ref="myFormRef" title="我是标题" text="我是文本" :options="{ 'showIcon': true, 'type': 'success' }" @submit="submit"></myForm> -->
 </template>
 
 <script lang="ts" setup>
-import { onMounted, getCurrentInstance, reactive } from "vue"
+import { myMsgBox } from '/@/components/common/myMsgBox.ts';
+// import myForm from '/@/components/common/myForm.vue';
+
+import { onMounted, getCurrentInstance, reactive, ref } from "vue"
 import { useStore } from "vuex"
 import { useRoute } from "vue-router"
 
@@ -27,11 +31,28 @@ const getDeail = async () => {
 
 }
 
+function submit(data) {
+  console.log(data);
+}
+
 onMounted(() => {
-    console.log(proxy.$tipPop)
-    // // if(!store.getters.token){
-    //     proxy.$tipPop.show(true)
-    // // }
+    console.log("token不存在=================")
     getDeail()
+
+    if(!store.getters.token){
+        // 调用方式一：
+        // const myFormRef = ref()
+        // myFormRef.value.showDialog();
+
+        // 调用方式二：
+        myMsgBox('我是文本', '我是标题', {
+            showIcon:true,
+            type:'success',
+        }).then((data)=>{
+            console.log('then中获取值',data);
+        }).catch(()=>{
+            console.log('catch就是关闭弹窗');
+        })
+    }
 })
 </script>
